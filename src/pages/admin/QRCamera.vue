@@ -36,7 +36,7 @@ export default defineComponent({
         const videoDevices = devices.filter(device => device.kind === 'videoinput');
 
         // 첫 번째 비디오 입력 장치를 기본적으로 선택
-        const deviceId = videoDevices[1]?.deviceId || '';
+        const deviceId = videoDevices[0]?.deviceId || '';
 
         const stream = await navigator.mediaDevices.getUserMedia({
           video: {
